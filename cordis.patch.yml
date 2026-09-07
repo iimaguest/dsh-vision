@@ -1,0 +1,20 @@
+# dsh-vision bundle patch — mount the vision capability seam, the DeepSeek
+# vision provider, and the model-facing view_image tool. All three modules
+# ship inside this one installed package: the root export provides ctx.vision
+# (a Service), and the subpath exports provide the provider and tool plugins.
+- insert:
+    - id: vision
+      name: dsh-vision
+      config:
+        viewProvider: deepseek-official
+
+    - id: vision-deepseek
+      name: dsh-vision/vision-deepseek
+      config:
+        apiKeyEnv: DEEPSEEK_API_KEY
+        model: deepseek-v4-flash-vision-exp
+
+    - id: tool-vision
+      name: dsh-vision/tool-vision
+      config:
+        timeoutMs: 60000

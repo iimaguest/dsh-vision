@@ -1,0 +1,50 @@
+{
+  "name": "@deepseek-ai/dsh-vision-deepseek",
+  "description": "DeepSeek-backed view provider (chat-completions with one inline image) for the DeepSeek Harness vision capability seam (ctx.vision)",
+  "version": "0.1.1-rc.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iimaguest/dsh-vision.git",
+    "directory": "packages/vision-deepseek"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-agent": ">=0.1.0-rc.6",
+    "@deepseek-ai/dsh-attachment": ">=0.0.1-rc.1",
+    "@deepseek-ai/dsh-credentials": ">=0.0.1-rc.1",
+    "@deepseek-ai/dsh-launch-environment": ">=0.0.1-rc.3",
+    "@deepseek-ai/dsh-invariants": ">=0.0.1-rc.1",
+    "@deepseek-ai/dsh-session": ">=0.0.1-rc.1",
+    "@deepseek-ai/dsh-settings": ">=0.0.1-rc.1",
+    "@deepseek-ai/cordis": ">=4.0.1"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "typescript": "^5.9.3"
+  },
+  "author": "iimaguest"
+}
